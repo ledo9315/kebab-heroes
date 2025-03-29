@@ -8,8 +8,8 @@ interface Props {
 }
 
 const cats = [
-    { id: 0, name: "Pizza" },
-    { id: 1, name: "Döner" },
+    { id: 0, name: "Döner" },
+    { id: 1, name: "Pizza" },
     { id: 2, name: "Pita" },
     { id: 3, name: "Burger" },
     { id: 4, name: "Salat" },
@@ -26,7 +26,6 @@ export const Categories = ({ className }: Props) => {
                     href={`/#${name}`}
                     className={cn(
                         "flex items-center justify-center font-bold h-11 rounded-2xl px-5 hover:cursor-pointer",
-                        "transition-all duration-300 ease-in-out",
                         id === categoryActiveId
                             ? "bg-white shadow-md shadow-gray-200 text-primary"
                             : "text-gray-500"
