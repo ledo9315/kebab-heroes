@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "../ui";
 import { ArrowRight, ShoppingCart, User } from "lucide-react";
 import { SearchInput } from "./searchInput";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -14,15 +15,17 @@ export const Header = ({ className }: Props) => {
     <header className={cn("border border-b", className)}>
       <Container className="flex items-center justify-between py-8">
         {/* Left side */}
-        <div className="flex items-center gap-4">
-          <Image src="/logo.png" alt="Logo" width={55} height={55} />
-          <div>
-            <h1 className="text-2xl font-black uppercase">Kebap Heroes</h1>
-            <p className="text-sm text-gray-400 leading-3">
-              Pizza, Döner, Pita & mehr ...
-            </p>
+        <Link href="/">
+          <div className="flex items-center gap-4">
+            <Image src="/logo.png" alt="Logo" width={55} height={55} />
+            <div>
+              <h1 className="text-2xl font-black uppercase">Kebap Heroes</h1>
+              <p className="text-sm text-gray-400 leading-3">
+                Pizza, Döner, Pita & mehr ...
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <div className="mx-10 flex-1">
           <SearchInput />
